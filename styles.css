@@ -107,7 +107,7 @@ header[id="titles"]{
 
 /* media break-point */
 
-@media screen and (min-width:375px){
+@media screen and (min-width:320px){
     *{
         font-size: 14px;
     }
