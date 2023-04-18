@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+
+    <main id="main-doc">
+    <div id= "grid-1">
+      <nav id="navbar">
+        <div class="titlesdiv"><header id="titles"><b id="titles">CSS Documentation</b></header></div>
+        <div class="nav-links">
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#WYSN" class="nav-link">What You Should Know</a>
+        <a href="#Css" class="nav-link">Tailwind and CSS</a>
+        <a href="#MD" class="nav-link">Media Queries</a>
+        <a href="#Pseudo" class="nav-link">Pseudo Elements</a>
+        <a href="#Selector" class="nav-link">Selectors</a>
+        </div>
+      </nav>
+    </div>
+
+    <div id="grid-2">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>CSS stands for Cascading Style Sheets and is a styling language used to control the presentation and layout of web pages. It works alongside HTML and JavaScript to make websites look visually appealing and user-friendly.</p>
+        <p>CSS allows you to define colors, fonts, sizes, positions, and other visual aspects of web pages. It separates the content from the presentation, which means that you can modify the look and feel of a website without having to change the HTML code.</p>
+        <p>CSS uses a simple syntax of selectors and declarations. Selectors target specific HTML elements, and declarations define the styles applied to those elements. Styles can be defined inline within HTML, embedded in the head of an HTML document, or stored in separate CSS files that can be linked to multiple web pages.</p>
+        <p>CSS has evolved over the years to include advanced features such as responsive design, animations, and transitions, making it an essential tool for building modern websites.</p>
+        <p>This is some example of CSS syntax : </p>
+        <div id="code-section">
+        <code>p {
+            color: red;
+        }</code><br><code>.my-class {
+            background-color: yellow;
+         }</code><br><code>#my-id {
+            font-size: 24px;
+         }</code><br><code>h1 {
+            margin: 10px 20px;
+            padding: 5px 10px;
+            border: 1px solid black;
+         }</code><br><code>a:hover {
+            text-decoration: underline;
+         }</code>
+        </div>
+        </section>
+      <section class="main-section" id="WYSN">
+        <header>What You Should Know ?</header>
+      <p>There are many things that a web developer should know about CSS to use it effectively. Here are some key points to keep in mind:</p>
+        <ul>
+        <li>CSS works in conjunction with HTML and JavaScript to create dynamic and engaging web pages. It is used to style and position HTML elements on the page, while JavaScript is used to add interactivity and functionality.</li>
+        <li>CSS provides a wide range of selectors and properties that can be used to control the appearance of HTML elements. Selectors can target elements by their type, class, ID, attributes, and more, while properties can define styles such as colors, fonts, margins, padding, and borders.</li>
+        <li>CSS can be applied to HTML elements inline, embedded in the head of an HTML document, or stored in separate CSS files that can be linked to multiple web pages. By keeping CSS separate from HTML, developers can more easily modify the appearance of a website without having to make changes to the underlying content.</li>
+        <li>CSS provides many advanced features that allow developers to create highly dynamic and interactive web pages, such as responsive design, animations, and transitions. These features can enhance the user experience and make web pages more engaging and memorable.</li>
+        <li>CSS has evolved significantly since its initial introduction, and modern web developers should stay up-to-date with the latest best practices and techniques. This includes using CSS preprocessors such as Sass and Less, adopting a mobile-first design approach, and using CSS frameworks such as Bootstrap and Foundation to streamline development.</li>
+        </ul>
+        <p>Its important to make this valueable key in mind</p>
+      </section>
+      
+      <section class="main-section" id="Css">
+        <header>Tailwind and CSS</header>
+      <p>Tailwind CSS is a CSS framework, which means it is built on top of regular CSS and provides additional pre-written styles and utility classes that developers can use to style their websites more quickly and efficiently.
+        The main difference between Tailwind CSS and regular CSS is that Tailwind CSS provides a large collection of pre-built utility classes that can be used to apply styles to HTML elements without having to write custom CSS. These classes are designed to be composable, meaning they can be combined to create more complex styles.</p>
+      <p>In contrast, regular CSS requires developers to write custom styles for each element on the page. While this provides more flexibility and control, it can also be time-consuming and require a lot of code.
+        Overall, Tailwind CSS can be a powerful tool for web developers who want to quickly create attractive and responsive websites, while regular CSS provides more control and flexibility for developers who want to create highly customized styles.</p>
+      </section>
+      
+      <section class="main-section" id="MD">
+        <header>Media Queries</header>
+      <p>Media queries are a feature of CSS that allow developers to apply different styles to a web page based on the characteristics of the device or screen it is being viewed on. By using media queries, developers can create responsive designs that adapt to the size and orientation of the user's device, improving the user experience and making websites more accessible.
+        Media queries are written using the @media rule in CSS, which allows developers to specify conditions that must be met for the styles within the rule to be applied. For example, a media query that applies styles only to screens wider than 768 pixels might look like this:</p><br>
+        <code>@media screen and (min-width: 768px) {
+            /* Styles for screens wider than 768px go here */
+        }</code><br>
+      <p>In this example, the screen keyword specifies that the media query applies only to screens (as opposed to print or other types of media), while the (min-width: 768px) condition specifies that the styles should be applied only to screens with a width of 768 pixels or greater.
+
+        Media queries can also be used to target specific devices, such as mobile phones or tablets, or to apply different styles based on the orientation of the device (landscape or portrait). For example:</p><br>
+        <code>/* Styles for mobile phones */
+            @media only screen and (max-width: 480px) {
+              /* Styles for mobile devices go here */
+            }
+            
+            /* Styles for tablets */
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+              /* Styles for tablets go here */
+            }
+            
+            /* Styles for landscape orientation */
+            @media only screen and (orientation: landscape) {
+              /* Styles for landscape orientation go here */
+            }</code><br>
+            <p>By using media queries, developers can create websites that are flexible and responsive, adapting to the needs and preferences of users on a wide range of devices and platforms.</p>
+      </section>
+      
+      <section class="main-section" id="Pseudo">
+        <header>Pseudo Elements</header>
+      <p>In CSS, a pseudo-element is a keyword added to a selector that allows developers to style a specific part of an HTML element. Pseudo-elements are denoted by a double colon (::) before the element name and come in several different types, each with its own set of styling options.
+        <br>Here are some examples of common pseudo-elements:</p>
+        <ol>
+            <li><code>::before</code> - This pseudo-element allows developers to insert content before the content of an HTML element. It is often used to add decorative elements, such as icons or background images, to an element.</li>
+            <li><code>::after</code> - This pseudo-element allows developers to insert content after the content of an HTML element. It can also be used to add decorative elements or to create effects such as tooltips or popovers.</li>
+            <li><code>::first-line</code> - This pseudo-element allows developers to style the first line of text within an HTML element. It can be used to change the font, color, or spacing of the first line of a paragraph or heading, for example.</li>
+            <li><code>::first-letter</code> - This pseudo-element allows developers to style the first letter of an HTML element. It can be used to create decorative drop caps or to highlight the first letter of a paragraph.</li>
+            <li><code>::selection</code> - This pseudo-element allows developers to style the portion of text that has been selected by the user. It can be used to change the background color or font color of selected text, for example.</li>
+        </ol>
+      <p>Pseudo-elements can be combined with other CSS selectors to create more complex styles. They are a powerful tool for web developers who want to create custom and dynamic styling effects on their web pages.</p>
+      </section>
+      <section class="main-section" id="Selector">
+        <header>Selectors</header>
+        <p>In CSS, selectors are patterns used to select HTML elements that you want to style. Selectors can be based on element names, class names, ID attributes, or any combination of these.</p>
+        By combining these different types of selectors, you can create powerful and specific styles that apply only to the elements you want to target.
+      </section>
+    </div>
+    </main>
+    </body>
+</html>
