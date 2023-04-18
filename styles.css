@@ -155,6 +155,7 @@ header[id="titles"]{
        width: 100%;
        flex: 4;
        border: none;
+       overflow: hidden;
     }
     #main-doc{
         flex-direction: row;
