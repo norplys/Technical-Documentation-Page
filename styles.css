@@ -52,7 +52,7 @@ section{
 body{
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     background-color: rgba(34,34,34,1);
 
 }
@@ -74,7 +74,7 @@ body{
     padding-left: 10px;
     border: 1px solid aliceblue;
     margin-top: 10px;
-    width: 100%;
+    width: fit-content;
 }
 ul , ol{
     padding-left: 50px
@@ -92,7 +92,13 @@ header[id="titles"]{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
 }
-
+.nav-links a:first-child{
+    padding-top: 10px ;
+    border-top: none;
+}
+.nav-links a:last-child{
+    padding-bottom: 10px;
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -107,7 +113,7 @@ header[id="titles"]{
 
 /* media break-point */
 
-@media screen and (min-width:375px){
+@media screen and (min-width:320px){
     *{
         font-size: 14px;
     }
@@ -146,6 +152,16 @@ header[id="titles"]{
     *{
         font-size: 15px;
     }
+    .nav-links a:first-child{
+        padding-top: 20px;
+        border-top: 1px solid whitesmoke;
+    }
+    .nav-links a:last-child{
+        padding-bottom: none;
+    }
+    body{
+        padding: 0;
+    }
     .titles{
        flex:0.5;
     }
@@ -155,6 +171,7 @@ header[id="titles"]{
        width: 100%;
        flex: 4;
        border: none;
+       overflow: hidden;
     }
     #main-doc{
         flex-direction: row;
@@ -187,5 +204,13 @@ header[id="titles"]{
     }
     #navbar{
         width: 250px;
+    }
+}
+@media screen and (min-width:1440px){
+    #grid-1{
+        flex:1;
+    }
+    #grid-2{
+        flex: 3;
     }
 }
